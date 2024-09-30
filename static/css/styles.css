@@ -1,0 +1,76 @@
+.texts{
+    text-align: center;
+}
+
+.block-button{
+    display: flex;
+    justify-content: center;
+}
+
+.title_blic{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.example-block{
+    width: 200px;
+    height: 100px;
+    border: solid;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.example-block p{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.light-theme-block{
+    border-color: yellow;
+    background-color: aqua;
+}
+
+.light-theme-block:hover{
+    background-color: rgb(23, 228, 228);
+    border-color: rgb(230, 230, 11);
+}
+
+.light-theme-text{
+    color: rgb(45, 173, 23);
+}
+
+.light-theme-text:hover{
+    color: rgb(41, 146, 22);
+}
+
+.black-theme-block{
+    border-color: darkblue;
+    background-color: black;
+}
+
+.black-theme-block:hover{
+    background-color: rgb(48, 47, 47);
+    border-color: rgb(22, 22, 189);
+}
+
+.black-theme-text{
+    color: white;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    justify-content: space-evenly;
+}
+
+.image-container img{
+    cursor: pointer;
+}
