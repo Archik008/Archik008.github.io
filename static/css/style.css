@@ -1,0 +1,93 @@
+body{
+    background-color: rgb(44, 44, 44);
+}
+
+.tasks-title{
+    text-align: center;
+    color: white;
+}
+
+.tasks{
+    color: white;
+}
+
+.name-task{
+    font-size: larger;
+}
+
+.code-block {
+    background-color: #1e1e1e; /* Темный цвет фона блока кода */
+    border: 1px solid #444; /* Темная граница */
+    border-radius: 5px; /* Закругление углов */
+    padding: 10px; /* Отступы */
+    font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт */
+    overflow: auto; /* Прокрутка, если код не помещается */
+    width: 80%; /* Ширина блока кода */
+    margin-top: 10px;
+}
+
+/* Стили для выделения синтаксиса (по желанию) */
+.keyword {
+    color: #569cd6; /* Цвет для ключевых слов */
+}
+.string {
+    color: #ce9178; /* Цвет для строк */
+}
+.comment {
+    color: #6a9955; /* Цвет для комментариев */
+}
+
+.function{
+    margin-left: 25px;
+}
+
+.inputs input{
+    background-color: #727272;
+    color: white;
+    margin-left: 5px;
+}
+
+input::placeholder{
+    color: rgb(185, 185, 185);
+}
+
+.input1{
+    margin-top: 10px;
+}
+
+.input2{
+    margin-top: 5px;
+}
+
+.row{
+    display: flex;
+}
+
+.button button{
+    width: 80px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.task-down{
+    margin-top: 10px;
+}
+
+.result h3{
+    margin-left: 10px;
+}
+
+.button-compile button{
+    width: 110px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.input3{
+    margin-top: 13px;
+}
+
+.button-compare button{
+    height: 30px;
+}
