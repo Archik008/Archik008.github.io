@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="static/css/styles.css">
     <title>Document</title>
 </head>
@@ -14,6 +15,114 @@
     </table>
     <h2>Голые данные из json:</h2>
     <pre><code class="json" id="jsonDisplay"></code></pre>
+=======
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tasks-title">
+        <h1>Задачки</h1>
+    </div>
+    <div class="tasks">
+        <ul>
+            <div class="task">
+                <div class="name-task">
+                    <li>1. Сравнение чисел (легкая)</li>
+                </div>
+                <div class="value-task">
+                    <li>Программа, которая принимает два числа и выводит, какое из них больше или если они равны</li>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">let</span> num1 = document.querySelector(<span class="string">'.input1 input'</span>);<br>
+                        <span class="keyword">let</span> num2 = document.querySelector(<span class="string">'.input2 input'</span>);<br><br>
+                        
+                        <span class="keyword">let</span> button = document.querySelector(<span class="string">'.button button'</span>);<br><br>
+                        
+                        button.onclick = <span class="keyword">function</span> () {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = <span class="keyword">Number</span>(num1.value);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = <span class="keyword">Number</span>(num2.value);<br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> (num1 > num2) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="string">`Num1(${num1}) > Num2(${num2})`</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <span class="keyword">else if</span> (num1 == num2) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="string">`Num1(${num1}) = Num2(${num2})`</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <span class="keyword">else</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="string">`Num1(${num1}) < Num2(${num2})`</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        };
+                    </code>
+                </div>
+                <div class="row">
+                    <div class="inputs-block">
+                        <div class="inputs input1">
+                            <input type="text" name="" id="" placeholder="num1">
+                        </div>
+                        <div class="inputs input2">
+                            <input type="text" name="" id="" placeholder="num2">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="button">Сравнить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="task task-down">
+                <div class="name-task">
+                    <li>2. Проверка типа данных (средняя)</li>
+                </div>
+                <div class="value-task"><li>Программа, выводит тип данных для заданного значения</li></div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">let</span> var1 = <span class="keyword">null</span>;<br>
+                        <span class="keyword">let</span> var2 = <span class="number">23</span>;<br>
+                        <span class="keyword">let</span> var3 = <span class="keyword">true</span>;<br><br>
+                    
+                        <span class="keyword">let</span> buttonCompile = document.querySelector(<span class="string">'.button-compile button'</span>);<br><br>
+                    
+                        buttonCompile.onclick = <span class="keyword">function</span> () {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;document.querySelector(<span class="string">'.result'</span>).innerHTML = `<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">${typeof var1}</span><br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">${typeof var2}</span><br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">${typeof var3}</span><br>`;<br>
+                        };
+                    </code>                    
+                </div>
+                <div class="code-block result">
+                    ...
+                </div>
+                <div class="button button-compile">
+                    <button type="button">Компилировать</button>
+                </div>
+            </div>
+            <div class="task task-down">
+                <div class="name-task"><li>3. Четное или нечетное число (средняя)</li></div>
+                <div class="value-task"><li>Программа, которая проверяет, является ли введенное число четным или нечетным</li></div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">let</span> buttonCompare = document.querySelector(<span class="string">'.button-compare button'</span>);<br><br>
+                        buttonCompare.onclick = <span class="keyword">function</span> () {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span> numCompare = document.querySelector(<span class="string">'.input3 input'</span>).value;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> (numCompare % 2 == 0) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="string">'Число четное'</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <span class="keyword">else</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(<span class="string">'Число нечетное'</span>);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        };
+                    </code>
+                </div>
+                <div class="row">
+                    <div class="inputs input3">
+                        <input type="text" placeholder="Введите число">
+                    </div>
+                    <div class="button button-compare">
+                        <button type="button">Сравнить</button>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+>>>>>>> 474f0b6e761f7a7fd18485c7902636c1ab921098
     <script src="static/js/script.js"></script>
 </body>
 </html>
