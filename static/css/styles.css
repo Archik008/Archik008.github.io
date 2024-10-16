@@ -88,7 +88,7 @@
 }
 
 .title h1{
-    font-size: 60px;
+    font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -165,4 +165,65 @@
 
 .part-row span{
     margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons-header, .header-text{
+        display: none;
+    }
+
+    .search{
+        margin-left: auto;
+    }
+
+   .header{
+    margin-top: 0;
+   } 
+
+   .title h1{
+    font-size: 30px;
+   }
+
+   .title{
+    height: 80px;
+   }
+
+   .o-comp-container{
+    display: none;
+   }
+
+   .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+
+   .images img{
+    padding: 10px;
+   }
+
+   .video-container{
+    display: none;
+   }
+   .slack-android-container{
+    margin-top: 50px;
+   }
+
+   .slack-android-btn{
+    display: flex;
+    justify-content: center;
+   }
+
+    .button-slack-android{
+        display: flex;
+        width: 190px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(248, 248, 80);
+   }
+
+   .image-container{
+    margin-top: 30px;
+   }
 }

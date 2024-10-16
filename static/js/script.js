@@ -1,45 +1,38 @@
-let url = "https://jsonplaceholder.typicode.com/users"
+const mediaQuery = window.matchMedia('(max-width: 600px)');
 
-fetch(url)
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error("Ошибка запроса");
-        }
-        return response.json();
+// Функция, которая будет вызываться при изменении состояния медиа-запроса
+function handleMediaQuery(event) {
+    if (event.matches) {
+        setMobile();
+    } else {
+        document.querySelector('.slack-android-container').style.display = 'none';
+    }
+}
+
+function setMobile() {
+    const slack_android = document.querySelector('.button-slack-android')
+
+    slack_android.addEventListener('touchstart', () => {
+        slack_android.style.backgroundColor = 'rgb(224, 224, 77)';
+
+        setTimeout(() => {
+            slack_android.style.backgroundColor = 'rgb(248, 248, 80)';
+        }, 200);
+    });
+
+    const getStarted = document.querySelector('.get-started')
+
+    getStarted.addEventListener('touchstart', () => {
+        getStarted.style.backgroundColor = 'rgb(78, 7, 78)';
+        getStarted.style.borderColor = 'rgb(78, 7, 78)';
+
+        setTimeout(() => {
+            getStarted.style.backgroundColor = 'rgb(99, 7, 99)';
+            getStarted.style.borderColor = 'rgb(99, 7, 99)';
+        }, 200);
     })
-    .then(
-        (data) => {
-            console.log(data);
-            document.getElementById("jsonDisplay").textContent = JSON.stringify(data, null, 2);
+}
 
-            const table = document.querySelector('table');
+handleMediaQuery(mediaQuery);
 
-            const headers = table.querySelector('thead');
-            const body = table.querySelector('tbody');
-
-            let headers_arr = ["name", "email"];
-
-            let th_headers = document.createElement('tr');
-
-            headers_arr.forEach(element => {
-                let new_header = document.createElement('th'); 
-                new_header.textContent = element;
-                th_headers.appendChild(new_header);
-            });
-
-            headers.appendChild(th_headers);
-            
-            for (const dict of data) {
-                let row = document.createElement('tr')
-                headers_arr.forEach(element => {
-                    let td = document.createElement('td');
-                    td.textContent = dict[element];
-                    row.appendChild(td);
-                })
-                body.appendChild(row);
-            }
-        }
-    )
-    .catch((error) => {
-        throw new Error(error);
-    })
+mediaQuery.addEventListener('change', handleMediaQuery);
