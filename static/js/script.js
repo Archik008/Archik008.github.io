@@ -12,24 +12,13 @@ function handleMediaQuery(event) {
 function setMobile() {
     const slack_android = document.querySelector('.button-slack-android')
 
-    slack_android.addEventListener('touchstart', () => {
+    slack_android.addEventListener('touchstart', (e) => {
+        e.preventDefault();
         slack_android.style.backgroundColor = 'rgb(224, 224, 77)';
-
-        setTimeout(() => {
-            slack_android.style.backgroundColor = 'rgb(248, 248, 80)';
-        }, 200);
     });
 
-    const getStarted = document.querySelector('.get-started')
-
-    getStarted.addEventListener('touchstart', () => {
-        getStarted.style.backgroundColor = 'rgb(78, 7, 78)';
-        getStarted.style.borderColor = 'rgb(78, 7, 78)';
-
-        setTimeout(() => {
-            getStarted.style.backgroundColor = 'rgb(99, 7, 99)';
-            getStarted.style.borderColor = 'rgb(99, 7, 99)';
-        }, 200);
+    slack_android.addEventListener('touchend', () => {
+        slack_android.style.backgroundColor = 'rgb(248, 248, 80)';
     })
 }
 
