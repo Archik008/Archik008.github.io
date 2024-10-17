@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props@1.6.17/easings.min.css";
+
 .header{
     display: flex;
     justify-content: center;
@@ -81,9 +83,6 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
-.some-words .get-started{
-    margin-top: -32px;
-}
 
 .buttons-header{
     display: flex;
@@ -108,6 +107,7 @@
 }
 
 .some-words .get-started{
+    margin-top: -32px;
     margin-left: auto;
     margin-right: auto;
     width: 170px;
@@ -245,4 +245,24 @@
         background-color: rgb(78, 7, 78);
         border-color: rgb(78, 7, 78);
     }
+}
+
+@keyframes glow {
+    50% {
+      box-shadow: 0 0 40px rgb(248, 248, 80);
+    }
+}
+
+@keyframes glitch {
+    50% {
+      transform: skew(180deg);
+    }
+}
+
+.glow-effect{
+    animation: glow 0.5s infinite;
+}
+
+.glitch-effect{
+    animation: glitch 0.5s infinite;
 }
