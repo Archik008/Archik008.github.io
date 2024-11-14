@@ -1,4 +1,4 @@
-const tgWebApp = window.Telegram
+const tgWebApp = window.Telegram.WebApp
 
 let service = null;
 
