@@ -34,10 +34,10 @@ document.documentElement.style.setProperty('--tg-theme-button-color', theme.butt
 document.documentElement.style.setProperty('--tg-theme-button-text-color', theme.button_text_color || '#ffffff');
 
 
-const submitBtn = document.querySelector(".send").querySelector("input")
+const submitBtn = document.querySelector(".send-btn")
+console.log(submitBtn)
 
-submitBtn.addEventListener("submit", function (e) {
-    e.preventDefault();
+submitBtn.addEventListener("click", function (e) {
 
     const name = document.getElementById('name').value;
     const contact = document.getElementById('contact').value;
