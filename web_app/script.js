@@ -40,8 +40,6 @@ submitBtn.addEventListener("click", function (e) {
     const contact = document.getElementById('contact').value;
     const description = document.getElementById('description').value;
 
-    const params = [name, contact, description]
-
     if(name.length < 3 || contact.length < 3 || description.length < 5){
         const errorElm = document.querySelector(".error");
         errorElm.textContent = "Некорректные данные";
