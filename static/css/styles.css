@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-    color: var(--tg-theme-button-color);
+    background-color: var(--tg-theme-button-color);
 }
 
 .search img{
@@ -16,7 +16,6 @@
 
 .header-text{
     cursor: pointer;
-    color: var(--tg-theme-button-text-color);
 }
 
 .header-text span img{
