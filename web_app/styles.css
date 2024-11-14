@@ -1,8 +1,6 @@
 body{
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    background-color: var(--tg-theme-bg-color);
-    color: var(--tg-theme-text-color);
 }
 
 .question, .ask-form{
@@ -14,9 +12,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50%;
-    margin-bottom: 50%;
-    /* display: none; */
+    height: 97vh;
 }
 
 .section{
@@ -140,6 +136,8 @@ span{
     min-height: 100px;
     box-sizing: border-box;
     border-color: #8bb6e8;
+    background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
 }
 
 .description:focus {
@@ -151,9 +149,7 @@ span{
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
-    /* color: white; */
     color: var(--tg-theme-button-text-color);
-    /* background-color: #4a76a8; */
     background-color: var(--tg-theme-button-color);
     border: none;
     border-radius: 8px;
@@ -166,8 +162,8 @@ span{
 }
 
 .send-btn:hover {
-    background-color: #3a5c8e; /* Тёмный цвет при наведении */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Тень */
+    background-color: #3a5c8e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .send{
