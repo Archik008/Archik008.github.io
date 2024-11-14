@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-    background-color: var(--tg-theme-button-color);
 }
 
 .search img{
@@ -92,7 +91,6 @@
 
 .title{
     text-align: center;
-    color: var(--tg-theme-text-color);
 }
 
 .title h1{
@@ -119,7 +117,6 @@
 .other-text{
     text-align: center;
     margin-top: 20px;
-    color: var(--tg-theme-text-color);
 }
 
 .other-text span{
@@ -182,10 +179,6 @@
 }
 
 @media screen and (max-width: 600px) {
-    body{
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
     .buttons-header, .header-text{
         display: none;
     }
@@ -204,7 +197,6 @@
 
    .title{
     height: 80px;
-    color: var(--tg-theme-text-color);
    }
 
    .o-comp-container{
@@ -244,8 +236,7 @@
    }
 
    .image-container{
-    /* margin-top: 30px; */
-    display: none;
+    margin-top: 30px;
    }
 }
 

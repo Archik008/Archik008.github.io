@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="web_app/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question_main_block">
+        <div class="question">
+            <div class="title"><h1>За какой услугой вы хотите к нам обратиться?</h1></div>
+        </div>
+        <div class="row">
+            <div class="section tgbots" onclick="get_service(this)">
+                <div class="bots-parts">
+                    <img src="web_app/img/bot.png" alt="" width="20px" height="15px">
+                    <span>Телеграм-бот</span>
+                </div>
+            </div>
+            <div class="section webapps" onclick="get_service(this)">
+                <div class="webapps-parts">
+                    <img src="web_app/img/web_app.png" alt="" width="20px" height="20px">
+                    <span>Web-app</span>
+                </div>
+            </div>
+        </div>
+        <div class="long-section" onclick="get_service(this)">
+            <div class="servers">
+                <img src="web_app/img/servers.png" alt="" width="20px" height="20px">
+                <span>Серверы и хостинг</span>
+            </div>
+        </div>
+    </div>
+    <form class="form-main-block">
+        <div class="ask-form">
+            <div class="title"><h1>Напишите детали вашей заявки</h1></div>
+        </div>
+        <div class="get-name">
+            <h3>Ваше имя</h3>
+            <input type="text" class="input-short-form" id="name">
+        </div>
+        <div class="get-contact">
+            <h3>Ваш контакт</h3>
+            <input type="text" class="input-short-form" id="contact" placeholder="Телеграм, номер телефона, почта">
+        </div>
+        <div class="get-description">
+            <h3>Детали заказа</h3>
+            <textarea class="description" placeholder="Ваш текст..."></textarea>
+        </div>
+        <div class="send">
+            <input type="submit" value="Отправить заявку" class="send-btn">
+        </div>
+    </form>
+    <script src="web_app/script.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</body>
+</html>
