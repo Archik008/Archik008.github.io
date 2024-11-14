@@ -7,8 +7,6 @@ function get_service(elm) {
 
     service = spanServiceText;
 
-    console.log(service);
-
     const questionBlock = document.querySelector(".question_main_block");
     questionBlock.classList.remove("visible");
     questionBlock.classList.add("hidden");
@@ -34,14 +32,21 @@ document.documentElement.style.setProperty('--tg-theme-button-color', theme.butt
 document.documentElement.style.setProperty('--tg-theme-button-text-color', theme.button_text_color || '#ffffff');
 
 
-const submitBtn = document.querySelector(".send-btn")
-console.log(submitBtn)
+const submitBtn = document.querySelector(".send-btn");
 
 submitBtn.addEventListener("click", function (e) {
 
     const name = document.getElementById('name').value;
     const contact = document.getElementById('contact').value;
     const description = document.getElementById('description').value;
+
+    const params = [name, contact, description]
+
+    if(name.length < 3 || contact.length < 3 || description.length < 5){
+        const errorElm = document.querySelector(".error");
+        errorElm.textContent = "Некорректные данные";
+        return;
+    }
 
     const formData = {
         name: name,
