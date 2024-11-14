@@ -125,7 +125,7 @@ span{
 .input-short-form::placeholder, .description::placeholder{
     font-size: 13px;
     /* color: #888888; */
-    color: var(--tg-theme-text-color);
+    color: var(--tg-theme-hint-color);
 }
 
 .description {
