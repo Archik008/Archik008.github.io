@@ -1,4 +1,4 @@
-const tgWebApp = window.Telegram.WebApp
+const tgWebApp = Telegram.WebApp
 
 let service = null;
 
@@ -52,5 +52,5 @@ submitBtn.addEventListener("submit", function (e) {
 
     tgWebApp.sendData(JSON.stringify(formData));
 
-    tgWebApp.close()
+    tgWebApp.close();
 })
