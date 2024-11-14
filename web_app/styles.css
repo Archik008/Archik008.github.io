@@ -115,11 +115,9 @@ span{
     transition: all 0.3s ease;
     background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
-    /* border-color: #8bb6e8; */
 }
 
 .input-short-form:focus {
-    /* border-color: #4a76a8; */
     border-color: var(--tg-theme-button-color);
     box-shadow: 0 0 8px rgba(74, 118, 168, 0.5);
 }
@@ -127,7 +125,7 @@ span{
 .input-short-form::placeholder, .description::placeholder{
     font-size: 13px;
     /* color: #888888; */
-    color: var(--tg-theme-hint-color);
+    color: var(--tg-theme-text-color);
 }
 
 .description {
@@ -141,7 +139,7 @@ span{
     transition: all 0.3s ease;
     min-height: 100px;
     box-sizing: border-box;
-    border-color: #8bb6e8;
+    border-color: var(--tg-theme-hint-color);
     background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
 }
@@ -179,4 +177,22 @@ span{
 
 .form-main-block{
     display: none;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.question_main_block, .form-main-block {
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
